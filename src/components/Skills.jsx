@@ -6,7 +6,7 @@ function Skills() {
       number: "01",
       title: "Artificial Intelligence",
       description:
-        "Conception de solutions intelligentes, apprentissage automatique et détection d'anomalies.",
+        "Designing intelligent solutions, applying machine learning techniques and developing anomaly detection systems.",
       skills: [
         "Machine Learning",
         "Feature Engineering",
@@ -20,7 +20,7 @@ function Skills() {
       number: "02",
       title: "Data Science",
       description:
-        "Transformation des données brutes en informations exploitables et modèles prédictifs.",
+        "Transforming raw data into actionable insights through data analysis, processing and predictive modeling.",
       skills: [
         "Python",
         "Pandas",
@@ -34,7 +34,7 @@ function Skills() {
       number: "03",
       title: "Backend & APIs",
       description:
-        "Développement d'applications backend et intégration de modèles IA dans des APIs.",
+        "Developing backend applications and integrating AI models into robust and efficient APIs.",
       skills: [
         "FastAPI",
         "Flask",
@@ -48,7 +48,7 @@ function Skills() {
       number: "04",
       title: "Web & Databases",
       description:
-        "Création d'interfaces web et gestion des données dans des applications full-stack.",
+        "Building web interfaces and managing data within full-stack applications.",
       skills: [
         "HTML",
         "CSS",
@@ -78,9 +78,8 @@ function Skills() {
           </div>
 
           <p className="skills-intro">
-            Des compétences développées à travers mes projets
-            en Intelligence Artificielle, Data Science,
-            développement backend et applications web.
+            Skills developed through my projects in Artificial Intelligence,
+            Data Science, backend development and web applications.
           </p>
 
         </div>
