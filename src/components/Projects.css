@@ -1,0 +1,818 @@
+/* ========================================
+   PROJECTS SECTION
+======================================== */
+
+.projects {
+  position: relative;
+
+  padding: 115px 6%;
+
+  background:
+    radial-gradient(
+      circle at 8% 25%,
+      rgba(139, 124, 255, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 92% 75%,
+      rgba(85, 167, 255, 0.10),
+      transparent 30%
+    ),
+    #070812;
+
+  color: white;
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   BACKGROUND GLOWS
+======================================== */
+
+.projects::before {
+  content: "";
+
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  top: 15%;
+  left: -280px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(139, 124, 255, 0.12);
+
+  filter: blur(120px);
+
+  pointer-events: none;
+}
+
+
+.projects::after {
+  content: "";
+
+  position: absolute;
+
+  width: 480px;
+  height: 480px;
+
+  right: -240px;
+  bottom: 5%;
+
+  border-radius: 50%;
+
+  background:
+    rgba(85, 230, 230, 0.07);
+
+  filter: blur(120px);
+
+  pointer-events: none;
+}
+
+
+.projects-container {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1250px;
+
+  margin: 0 auto;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.projects-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 55px;
+
+  margin-bottom: 65px;
+}
+
+
+.projects-label {
+  margin-bottom: 20px;
+
+  color: #8b7cff;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+
+.projects-header h2 {
+  margin: 0;
+
+  /* Avant : jusqu'à 90px */
+  font-size: clamp(42px, 5vw, 68px);
+
+  line-height: 1;
+
+  letter-spacing: -3px;
+
+  font-weight: 700;
+}
+
+
+/* Gradient sur le mot secondaire */
+
+.projects-header h2 span {
+  background:
+    linear-gradient(
+      90deg,
+      #a69fff,
+      #6ca7ff,
+      #55e6e6
+    );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+}
+
+
+.projects-intro {
+  max-width: 410px;
+
+  margin-bottom: 4px;
+
+  color:
+    rgba(255, 255, 255, 0.50);
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+
+/* ========================================
+   PROJECTS LIST
+======================================== */
+
+.projects-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+
+/* ========================================
+   PROJECT CARD
+======================================== */
+
+.project-card {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 82px 1fr;
+
+  /* Avant : 450px */
+  min-height: 370px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.035),
+      rgba(255, 255, 255, 0.012)
+    );
+
+  overflow: hidden;
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    background 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+/* ========================================
+   COLORED GLOW INSIDE EACH PROJECT
+======================================== */
+
+.project-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  right: -150px;
+  top: -150px;
+
+  border-radius: 50%;
+
+  filter: blur(55px);
+
+  opacity: 0.45;
+
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+
+  pointer-events: none;
+}
+
+
+/* Project 1 — Purple */
+
+.project-card:nth-child(1)::before {
+  background:
+    rgba(139, 124, 255, 0.18);
+}
+
+
+/* Project 2 — Blue */
+
+.project-card:nth-child(2)::before {
+  background:
+    rgba(85, 167, 255, 0.17);
+}
+
+
+/* Project 3 — Cyan */
+
+.project-card:nth-child(3)::before {
+  background:
+    rgba(85, 230, 230, 0.14);
+}
+
+
+/* Project 4 — Pink */
+
+.project-card:nth-child(4)::before {
+  background:
+    rgba(232, 121, 249, 0.14);
+}
+
+
+/* Project 5 — Purple / Blue */
+
+.project-card:nth-child(5)::before {
+  background:
+    rgba(112, 128, 255, 0.16);
+}
+
+
+/* ========================================
+   CARD HOVER
+======================================== */
+
+.project-card:hover {
+  transform: translateY(-5px);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.018)
+    );
+
+  box-shadow:
+    0 25px 65px rgba(0, 0, 0, 0.24);
+}
+
+
+.project-card:nth-child(1):hover {
+  border-color:
+    rgba(139, 124, 255, 0.38);
+}
+
+.project-card:nth-child(2):hover {
+  border-color:
+    rgba(85, 167, 255, 0.38);
+}
+
+.project-card:nth-child(3):hover {
+  border-color:
+    rgba(85, 230, 230, 0.34);
+}
+
+.project-card:nth-child(4):hover {
+  border-color:
+    rgba(232, 121, 249, 0.34);
+}
+
+.project-card:nth-child(5):hover {
+  border-color:
+    rgba(112, 128, 255, 0.38);
+}
+
+
+.project-card:hover::before {
+  opacity: 0.9;
+
+  transform: scale(1.3);
+}
+
+
+/* ========================================
+   PROJECT NUMBER
+======================================== */
+
+.project-number {
+  position: relative;
+  z-index: 2;
+
+  padding: 30px 22px;
+
+  border-right:
+    1px solid rgba(255, 255, 255, 0.07);
+
+  color:
+    rgba(255, 255, 255, 0.25);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  transition:
+    color 0.3s ease;
+}
+
+
+/* Individual number colors */
+
+.project-card:nth-child(1):hover .project-number {
+  color: #9b91ff;
+}
+
+.project-card:nth-child(2):hover .project-number {
+  color: #65adff;
+}
+
+.project-card:nth-child(3):hover .project-number {
+  color: #65dddd;
+}
+
+.project-card:nth-child(4):hover .project-number {
+  color: #dd8bea;
+}
+
+.project-card:nth-child(5):hover .project-number {
+  color: #8994ff;
+}
+
+
+/* ========================================
+   PROJECT CONTENT
+======================================== */
+
+.project-main {
+  position: relative;
+  z-index: 2;
+
+  padding: 30px 40px;
+}
+
+
+/* ========================================
+   PROJECT TOP
+======================================== */
+
+.project-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+
+.project-type {
+  color: #8994ff;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+
+/* Different type colors */
+
+.project-card:nth-child(2) .project-type {
+  color: #65adff;
+}
+
+.project-card:nth-child(3) .project-type {
+  color: #65dddd;
+}
+
+.project-card:nth-child(4) .project-type {
+  color: #dd8bea;
+}
+
+
+/* ========================================
+   ARROW
+======================================== */
+
+.project-arrow {
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.10);
+
+  border-radius: 50%;
+
+  color:
+    rgba(255, 255, 255, 0.5);
+
+  font-size: 14px;
+
+  transition:
+    transform 0.4s ease,
+    color 0.4s ease,
+    border-color 0.4s ease,
+    background 0.4s ease;
+}
+
+
+.project-card:hover .project-arrow {
+  transform: rotate(45deg);
+
+  color: white;
+
+  border-color:
+    rgba(137, 148, 255, 0.40);
+
+  background:
+    rgba(137, 148, 255, 0.08);
+}
+
+
+/* ========================================
+   PROJECT TITLE
+======================================== */
+
+.project-main h3 {
+  /* Avant : 55px */
+  margin: 35px 0 15px;
+
+  color: #ffffff;
+
+  /* Avant : jusqu'à 58px */
+  font-size:
+    clamp(30px, 3.3vw, 44px);
+
+  font-weight: 600;
+
+  line-height: 1.05;
+
+  letter-spacing: -1.7px;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.project-description {
+  max-width: 780px;
+
+  margin-bottom: 12px;
+
+  color:
+    rgba(255, 255, 255, 0.72);
+
+  /* Avant : 17px */
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   DETAILS
+======================================== */
+
+.project-details {
+  max-width: 850px;
+
+  margin-bottom: 24px;
+
+  color:
+    rgba(255, 255, 255, 0.42);
+
+  /* Avant : 14px */
+  font-size: 12.5px;
+
+  line-height: 1.75;
+}
+
+
+/* ========================================
+   TECHNOLOGIES
+======================================== */
+
+.project-technologies {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+
+.project-technologies span {
+  padding: 7px 11px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.09);
+
+  border-radius: 100px;
+
+  background:
+    rgba(255, 255, 255, 0.02);
+
+  color:
+    rgba(255, 255, 255, 0.60);
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.project-technologies span:hover {
+  transform: translateY(-2px);
+
+  color: white;
+
+  border-color:
+    rgba(137, 148, 255, 0.40);
+
+  background:
+    rgba(137, 148, 255, 0.07);
+}
+
+
+/* ========================================
+   BOTTOM
+======================================== */
+
+.project-bottom {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  /* Avant : 45px */
+  margin-top: 30px;
+
+  padding-top: 18px;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.07);
+}
+
+
+/* RESULT */
+
+.project-result {
+  color:
+    rgba(255, 255, 255, 0.32);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+
+/* ========================================
+   PROJECT LINK
+======================================== */
+
+.project-link {
+  position: relative;
+
+  color: white;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease;
+}
+
+
+.project-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -5px;
+
+  width: 0;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #8b7cff,
+      #55a7ff,
+      #55e6e6
+    );
+
+  transition:
+    width 0.3s ease;
+}
+
+
+.project-link:hover {
+  color: #aab2ff;
+}
+
+
+.project-link:hover::after {
+  width: 100%;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+  .projects {
+    padding: 95px 5%;
+  }
+
+  .projects-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 25px;
+
+    margin-bottom: 50px;
+  }
+
+  .projects-intro {
+    max-width: 600px;
+  }
+
+  .project-card {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+  }
+
+  .project-number {
+    padding: 18px 26px;
+
+    border-right: none;
+
+    border-bottom:
+      1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .project-main {
+    padding: 28px;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+  .projects {
+    padding: 75px 5%;
+  }
+
+  .projects-header {
+    margin-bottom: 40px;
+  }
+
+  .projects-header h2 {
+    font-size: 42px;
+
+    letter-spacing: -2px;
+  }
+
+  .projects-intro {
+    font-size: 13px;
+  }
+
+  .project-main {
+    padding: 23px;
+  }
+
+  .project-main h3 {
+    margin-top: 30px;
+
+    font-size: 30px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .project-description {
+    font-size: 13px;
+  }
+
+  .project-details {
+    font-size: 12px;
+  }
+
+  .project-type {
+    font-size: 8px;
+
+    line-height: 1.5;
+  }
+
+  .project-bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 17px;
+
+    margin-top: 25px;
+  }
+
+  .project-arrow {
+    width: 35px;
+    height: 35px;
+  }
+
+}
+
+
+/* ========================================
+   VERY SMALL SCREENS
+======================================== */
+
+@media (max-width: 400px) {
+
+  .projects-header h2 {
+    font-size: 38px;
+  }
+
+  .project-main h3 {
+    font-size: 27px;
+  }
+
+  .project-main {
+    padding: 20px;
+  }
+
+}

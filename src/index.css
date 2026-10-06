@@ -1,0 +1,146 @@
+/* ========================================
+   GLOBAL COLOR SYSTEM
+======================================== */
+
+:root {
+  /* Main backgrounds */
+  --bg-main: #070812;
+  --bg-secondary: #0b0c18;
+  --bg-purple: #100b24;
+  --bg-blue: #071827;
+
+  /* Accent colors */
+  --purple: #8b7cff;
+  --blue: #55a7ff;
+  --cyan: #55e6e6;
+  --pink: #e879f9;
+
+  /* Text colors */
+  --text-main: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.65);
+  --text-muted: rgba(255, 255, 255, 0.4);
+
+  /* Borders */
+  --border-light: rgba(255, 255, 255, 0.08);
+}
+
+
+/* ========================================
+   RESET
+======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ========================================
+   HTML
+======================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* ========================================
+   BODY
+======================================== */
+
+body {
+  margin: 0;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: var(--text-main);
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(139, 124, 255, 0.10),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 30%,
+      rgba(85, 167, 255, 0.08),
+      transparent 30%
+    ),
+    var(--bg-main);
+
+  min-height: 100vh;
+}
+
+
+/* ========================================
+   BUTTONS & LINKS
+======================================== */
+
+button,
+a {
+  font-family: inherit;
+}
+
+
+/* ========================================
+   SELECTION
+======================================== */
+
+::selection {
+  background: rgba(139, 124, 255, 0.35);
+  color: white;
+}
+
+
+/* ========================================
+   SCROLLBAR
+======================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070812;
+}
+
+::-webkit-scrollbar-thumb {
+  background:
+    linear-gradient(
+      180deg,
+      var(--purple),
+      var(--blue)
+    );
+
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background:
+    linear-gradient(
+      180deg,
+      var(--pink),
+      var(--purple)
+    );
+}
+
+
+/* ========================================
+   PLACEHOLDER
+======================================== */
+
+.hero-placeholder {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #6b7280;
+}

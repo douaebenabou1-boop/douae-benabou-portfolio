@@ -1,0 +1,886 @@
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  padding: 125px 6% 75px;
+
+  color: white;
+
+  background:
+    radial-gradient(
+      circle at 15% 25%,
+      rgba(139, 124, 255, 0.15),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 30%,
+      rgba(85, 167, 255, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 75% 85%,
+      rgba(85, 230, 230, 0.06),
+      transparent 25%
+    ),
+    #070812;
+
+  overflow: hidden;
+}
+
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1250px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    1.08fr 0.92fr;
+
+  align-items: center;
+
+  gap: 65px;
+}
+
+
+/* ========================================
+   BACKGROUND
+======================================== */
+
+.hero-background {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+}
+
+
+/* GRID */
+
+.grid {
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.022) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.022) 1px,
+      transparent 1px
+    );
+
+  background-size: 70px 70px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      black,
+      transparent 92%
+    );
+
+  -webkit-mask-image:
+    linear-gradient(
+      to bottom,
+      black,
+      transparent 92%
+    );
+}
+
+
+/* ========================================
+   BACKGROUND GLOWS
+======================================== */
+
+.glow {
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  border-radius: 50%;
+
+  filter: blur(110px);
+
+  opacity: 0.16;
+}
+
+
+.glow-one {
+  top: 3%;
+  left: -12%;
+
+  background: #8b7cff;
+}
+
+
+.glow-two {
+  right: -12%;
+  bottom: -5%;
+
+  background: #55a7ff;
+}
+
+
+/* ========================================
+   AVAILABILITY
+======================================== */
+
+.availability {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 7px 12px;
+
+  margin-bottom: 24px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.09);
+
+  border-radius: 30px;
+
+  background:
+    rgba(255, 255, 255, 0.025);
+
+  color:
+    rgba(255, 255, 255, 0.50);
+
+  font-size: 10px;
+
+  letter-spacing: 0.4px;
+
+  backdrop-filter: blur(10px);
+}
+
+
+.availability span {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #55e6b3;
+
+  box-shadow:
+    0 0 12px
+    rgba(85, 230, 179, 0.85);
+}
+
+
+/* ========================================
+   LABEL
+======================================== */
+
+.hero-label {
+  margin-bottom: 15px;
+
+  color: #a69fff;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+
+/* ========================================
+   MAIN TITLE
+======================================== */
+
+.hero h1 {
+  margin: 0;
+
+  font-size:
+    clamp(58px, 7vw, 88px);
+
+  line-height: 0.92;
+
+  font-weight: 700;
+
+  letter-spacing: -4.5px;
+}
+
+
+/* GRADIENT NAME */
+
+.hero h1 span {
+  background:
+    linear-gradient(
+      90deg,
+      #ffffff 0%,
+      #c8c4ff 25%,
+      #9b91ff 48%,
+      #65adff 72%,
+      #55e6e6 100%
+    );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+}
+
+
+/* ========================================
+   ROLE
+======================================== */
+
+.hero h2 {
+  margin-top: 23px;
+
+  color:
+    rgba(255, 255, 255, 0.82);
+
+  font-size: 18px;
+
+  font-weight: 500;
+
+  letter-spacing: -0.2px;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.hero-description {
+  max-width: 550px;
+
+  margin-top: 17px;
+
+  color:
+    rgba(255, 255, 255, 0.48);
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.hero-buttons {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 29px;
+}
+
+
+.primary-button,
+.secondary-button {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 12px 18px;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+/* PRIMARY */
+
+.primary-button {
+  border: 1px solid transparent;
+
+  background: white;
+
+  color: #070812;
+}
+
+
+.primary-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 40px
+    rgba(139, 124, 255, 0.18);
+}
+
+
+.primary-button span {
+  font-size: 16px;
+}
+
+
+/* SECONDARY */
+
+.secondary-button {
+  color: white;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.11);
+
+  background:
+    rgba(255, 255, 255, 0.025);
+}
+
+
+.secondary-button:hover {
+  transform: translateY(-3px);
+
+  border-color:
+    rgba(101, 173, 255, 0.32);
+
+  background:
+    rgba(85, 167, 255, 0.07);
+}
+
+
+/* ========================================
+   TECHNOLOGIES
+======================================== */
+
+.hero-tech {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 28px;
+}
+
+
+.hero-tech span {
+  padding: 6px 10px;
+
+  color:
+    rgba(255, 255, 255, 0.42);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 100px;
+
+  background:
+    rgba(255, 255, 255, 0.015);
+
+  font-size: 9px;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* Individual subtle colors */
+
+.hero-tech span:nth-child(1):hover {
+  border-color:
+    rgba(139, 124, 255, 0.40);
+}
+
+.hero-tech span:nth-child(2):hover {
+  border-color:
+    rgba(85, 167, 255, 0.40);
+}
+
+.hero-tech span:nth-child(3):hover {
+  border-color:
+    rgba(85, 230, 230, 0.35);
+}
+
+.hero-tech span:nth-child(4):hover {
+  border-color:
+    rgba(232, 121, 249, 0.35);
+}
+
+
+.hero-tech span:hover {
+  transform: translateY(-2px);
+
+  color: white;
+
+  background:
+    rgba(255, 255, 255, 0.035);
+}
+
+
+/* ========================================
+   PHOTO AREA
+======================================== */
+
+.hero-visual {
+  position: relative;
+
+  height: 560px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ========================================
+   PHOTO WRAPPER
+======================================== */
+
+.photo-wrapper {
+  position: relative;
+
+  z-index: 3;
+
+  width: 365px;
+  height: 465px;
+}
+
+
+/* ========================================
+   PHOTO GLOW
+======================================== */
+
+.photo-glow {
+  position: absolute;
+
+  inset: -35px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #8b7cff 0%,
+      #e879f9 25%,
+      #55a7ff 65%,
+      #55e6e6 100%
+    );
+
+  filter: blur(75px);
+
+  opacity: 0.18;
+
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+
+.photo-wrapper:hover
+.photo-glow {
+  opacity: 0.25;
+
+  transform: scale(1.04);
+}
+
+
+/* ========================================
+   PHOTO FRAME
+======================================== */
+
+.photo-frame {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 7px;
+
+  border-radius:
+    180px 180px 24px 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(166, 159, 255, 0.55),
+      rgba(85, 167, 255, 0.25),
+      rgba(255, 255, 255, 0.05)
+    );
+
+  overflow: hidden;
+
+  box-shadow:
+    0 30px 80px
+    rgba(0, 0, 0, 0.25);
+}
+
+
+.photo-frame img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius:
+    174px 174px 18px 18px;
+
+  filter:
+    grayscale(5%)
+    contrast(1.02);
+}
+
+
+/* ========================================
+   ORBITS
+======================================== */
+
+.photo-orbit {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+.orbit-one {
+  width: 500px;
+  height: 250px;
+
+  border:
+    1px solid
+    rgba(139, 124, 255, 0.25);
+
+  transform:
+    rotate(-25deg);
+}
+
+
+.orbit-two {
+  width: 550px;
+  height: 285px;
+
+  border:
+    1px solid
+    rgba(85, 230, 230, 0.15);
+
+  transform:
+    rotate(35deg);
+}
+
+
+/* ========================================
+   FLOATING CARDS
+======================================== */
+
+.floating-card {
+  position: absolute;
+
+  z-index: 5;
+
+  padding: 11px 15px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.09);
+
+  border-radius: 11px;
+
+  background:
+    rgba(9, 10, 20, 0.76);
+
+  backdrop-filter:
+    blur(18px);
+
+  box-shadow:
+    0 15px 40px
+    rgba(0, 0, 0, 0.28);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.floating-card:hover {
+  transform: translateY(-4px);
+
+  background:
+    rgba(15, 17, 30, 0.88);
+}
+
+
+/* AI CARD */
+
+.card-ai {
+  top: 85px;
+  left: 5px;
+
+  border-color:
+    rgba(139, 124, 255, 0.22);
+}
+
+
+/* DATA CARD */
+
+.card-data {
+  right: 0;
+  bottom: 90px;
+
+  border-color:
+    rgba(85, 230, 230, 0.18);
+}
+
+
+.floating-card span {
+  display: block;
+
+  color:
+    rgba(255, 255, 255, 0.90);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+
+.card-ai span {
+  color: #b0aaff;
+}
+
+
+.card-data span {
+  color: #70dddd;
+}
+
+
+.floating-card small {
+  display: block;
+
+  margin-top: 4px;
+
+  color:
+    rgba(255, 255, 255, 0.35);
+
+  font-size: 9px;
+}
+
+
+/* ========================================
+   SCROLL INDICATOR
+======================================== */
+
+.scroll-indicator {
+  position: absolute;
+
+  bottom: 24px;
+  left: 50%;
+
+  transform:
+    translateX(-50%);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color:
+    rgba(255, 255, 255, 0.30);
+
+  font-size: 9px;
+
+  letter-spacing: 1px;
+}
+
+
+.scroll-indicator span {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #8b7cff;
+
+  box-shadow:
+    0 0 10px
+    rgba(139, 124, 255, 0.85);
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+  .hero {
+    padding:
+      125px 5% 70px;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+
+    text-align: center;
+  }
+
+  .availability {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons,
+  .hero-tech {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    height: 500px;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+  .hero {
+    min-height: auto;
+
+    padding:
+      110px 5% 65px;
+  }
+
+  .hero-container {
+    gap: 35px;
+  }
+
+  .hero h1 {
+    font-size: 52px;
+
+    line-height: 0.95;
+
+    letter-spacing: -3px;
+  }
+
+  .hero h2 {
+    margin-top: 20px;
+
+    font-size: 16px;
+  }
+
+  .hero-description {
+    font-size: 13px;
+  }
+
+  .hero-buttons {
+    margin-top: 25px;
+  }
+
+  .hero-visual {
+    height: 410px;
+  }
+
+  .photo-wrapper {
+    width: 270px;
+    height: 350px;
+  }
+
+  .orbit-one {
+    width: 360px;
+    height: 180px;
+  }
+
+  .orbit-two {
+    width: 400px;
+    height: 205px;
+  }
+
+  .card-ai {
+    top: 55px;
+    left: -5px;
+  }
+
+  .card-data {
+    right: -5px;
+    bottom: 55px;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+
+}
+
+
+/* ========================================
+   VERY SMALL SCREENS
+======================================== */
+
+@media (max-width: 400px) {
+
+  .hero h1 {
+    font-size: 45px;
+
+    letter-spacing: -2.5px;
+  }
+
+  .photo-wrapper {
+    width: 240px;
+    height: 320px;
+  }
+
+  .orbit-one {
+    width: 320px;
+    height: 160px;
+  }
+
+  .orbit-two {
+    width: 350px;
+    height: 180px;
+  }
+
+  .floating-card {
+    padding: 9px 11px;
+  }
+
+}

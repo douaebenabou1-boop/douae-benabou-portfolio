@@ -1,0 +1,597 @@
+/* ========================================
+   ABOUT SECTION
+======================================== */
+
+.about-section {
+  position: relative;
+
+  padding: 110px 6%;
+
+  background:
+    radial-gradient(
+      circle at 12% 25%,
+      rgba(139, 124, 255, 0.11),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 88% 70%,
+      rgba(232, 121, 249, 0.07),
+      transparent 28%
+    ),
+    #080812;
+
+  color: white;
+  overflow: hidden;
+}
+
+
+/* BACKGROUND GLOW */
+
+.about-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  right: -260px;
+  top: 20%;
+
+  border-radius: 50%;
+
+  background:
+    rgba(139, 124, 255, 0.10);
+
+  filter: blur(120px);
+
+  pointer-events: none;
+}
+
+
+.about-container {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1250px;
+
+  margin: 0 auto;
+}
+
+
+/* ========================================
+   SECTION HEADING
+======================================== */
+
+.section-heading {
+  display: flex;
+
+  gap: 28px;
+
+  margin-bottom: 60px;
+}
+
+
+.section-number {
+  padding-top: 7px;
+
+  color: #9b91ff;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+.section-label {
+  margin-bottom: 16px;
+
+  color: #9b91ff;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+
+/* ========================================
+   MAIN TITLE
+======================================== */
+
+.section-heading h2 {
+  max-width: 800px;
+
+  margin: 0;
+
+  font-size:
+    clamp(40px, 5vw, 66px);
+
+  line-height: 1;
+
+  letter-spacing: -3px;
+
+  font-weight: 650;
+}
+
+
+/* Gradient secondary text */
+
+.section-heading h2 span {
+  background:
+    linear-gradient(
+      90deg,
+      #a69fff,
+      #e879f9,
+      #65adff
+    );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+}
+
+
+/* ========================================
+   MAIN GRID
+======================================== */
+
+.about-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr 0.78fr;
+
+  gap: 75px;
+
+  align-items: start;
+}
+
+
+/* ========================================
+   TEXT
+======================================== */
+
+.about-intro {
+  max-width: 680px;
+}
+
+
+/* MAIN PARAGRAPH */
+
+.about-lead {
+  margin-bottom: 28px;
+
+  color:
+    rgba(255, 255, 255, 0.88) !important;
+
+  font-size: 20px !important;
+
+  line-height: 1.6 !important;
+
+  letter-spacing: -0.2px;
+}
+
+
+/* NORMAL PARAGRAPHS */
+
+.about-intro p {
+  margin-bottom: 19px;
+
+  color:
+    rgba(255, 255, 255, 0.48);
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+.about-intro strong {
+  color:
+    rgba(255, 255, 255, 0.82);
+
+  font-weight: 600;
+}
+
+
+/* ========================================
+   FOCUS CARD
+======================================== */
+
+.focus-card {
+  position: relative;
+
+  padding: 27px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.04),
+      rgba(255, 255, 255, 0.012)
+    );
+
+  backdrop-filter: blur(15px);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+/* Colored light */
+
+.focus-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  right: -120px;
+  top: -120px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(232, 121, 249, 0.11);
+
+  filter: blur(50px);
+
+  pointer-events: none;
+
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
+}
+
+
+.focus-card:hover {
+  transform: translateY(-4px);
+
+  border-color:
+    rgba(139, 124, 255, 0.28);
+
+  box-shadow:
+    0 20px 55px rgba(0, 0, 0, 0.18);
+}
+
+
+.focus-card:hover::before {
+  transform: scale(1.3);
+}
+
+
+/* ========================================
+   FOCUS TOP
+======================================== */
+
+.focus-top {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  padding-bottom: 20px;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.07);
+
+  color:
+    rgba(255, 255, 255, 0.40);
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+.focus-icon {
+  color: #dd8bea;
+
+  font-size: 16px;
+}
+
+
+/* ========================================
+   FOCUS LIST
+======================================== */
+
+.focus-list {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+.focus-item {
+  display: grid;
+
+  grid-template-columns: 35px 1fr;
+
+  gap: 13px;
+
+  padding: 23px 0;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+.focus-item:last-child {
+  border-bottom: none;
+}
+
+
+/* ========================================
+   FOCUS COLORS
+======================================== */
+
+.focus-index {
+  color: #9b91ff;
+
+  font-size: 9px;
+
+  font-weight: 600;
+}
+
+
+.focus-item:nth-child(2)
+.focus-index {
+  color: #65adff;
+}
+
+
+.focus-item:nth-child(3)
+.focus-index {
+  color: #65dddd;
+}
+
+
+.focus-item:nth-child(4)
+.focus-index {
+  color: #dd8bea;
+}
+
+
+/* ========================================
+   FOCUS CONTENT
+======================================== */
+
+.focus-item h3 {
+  margin-bottom: 7px;
+
+  color:
+    rgba(255, 255, 255, 0.88);
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+.focus-item p {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.38);
+
+  font-size: 11.5px;
+
+  line-height: 1.6;
+}
+
+
+/* ========================================
+   STATS
+======================================== */
+
+.about-stats {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  margin-top: 70px;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* ========================================
+   STAT
+======================================== */
+
+.stat {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 27px 22px;
+
+  border-right:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  transition:
+    background 0.3s ease;
+}
+
+
+.stat:last-child {
+  border-right: none;
+}
+
+
+.stat:hover {
+  background:
+    rgba(255, 255, 255, 0.025);
+}
+
+
+/* ========================================
+   STAT NUMBERS
+======================================== */
+
+.stat-number {
+  margin-bottom: 8px;
+
+  font-size: 22px;
+
+  font-weight: 600;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* Different colors */
+
+.stat:nth-child(1)
+.stat-number {
+  color: #a69fff;
+}
+
+
+.stat:nth-child(2)
+.stat-number {
+  color: #65adff;
+}
+
+
+.stat:nth-child(3)
+.stat-number {
+  color: #65dddd;
+}
+
+
+.stat:nth-child(4)
+.stat-number {
+  color: #dd8bea;
+}
+
+
+/* ========================================
+   STAT LABEL
+======================================== */
+
+.stat-label {
+  color:
+    rgba(255, 255, 255, 0.34);
+
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+  .about-section {
+    padding: 95px 5%;
+  }
+
+  .section-heading {
+    margin-bottom: 50px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  .about-stats {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    margin-top: 55px;
+  }
+
+  .stat:nth-child(2) {
+    border-right: none;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+  .about-section {
+    padding: 75px 5%;
+  }
+
+  .section-heading {
+    gap: 14px;
+
+    margin-bottom: 40px;
+  }
+
+  .section-heading h2 {
+    font-size: 42px;
+
+    letter-spacing: -2px;
+  }
+
+  .about-lead {
+    font-size: 18px !important;
+  }
+
+  .about-intro p {
+    font-size: 13px;
+  }
+
+  .focus-card {
+    padding: 22px;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+
+    margin-top: 45px;
+  }
+
+  .stat {
+    border-right: none;
+
+    border-bottom:
+      1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .stat:last-child {
+    border-bottom: none;
+  }
+
+}

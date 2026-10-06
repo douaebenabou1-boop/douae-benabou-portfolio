@@ -1,0 +1,822 @@
+/* ========================================
+   EXPERIENCE
+======================================== */
+
+.experience {
+  position: relative;
+
+  padding: 115px 6%;
+
+  background:
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(85, 167, 255, 0.11),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 8% 80%,
+      rgba(139, 124, 255, 0.08),
+      transparent 30%
+    ),
+    #080a12;
+
+  color: white;
+  overflow: hidden;
+}
+
+
+/* ========================================
+   BACKGROUND GLOW
+======================================== */
+
+.experience::before {
+  content: "";
+
+  position: absolute;
+
+  width: 550px;
+  height: 550px;
+
+  right: -300px;
+  top: 18%;
+
+  border-radius: 50%;
+
+  background:
+    rgba(85, 167, 255, 0.10);
+
+  filter: blur(130px);
+
+  pointer-events: none;
+}
+
+
+.experience-container {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1250px;
+
+  margin: 0 auto;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.experience-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 55px;
+
+  margin-bottom: 65px;
+}
+
+
+.experience-label {
+  margin-bottom: 20px;
+
+  color: #65adff;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+
+.experience-header h2 {
+  margin: 0;
+
+  font-size: clamp(42px, 5vw, 68px);
+
+  line-height: 1;
+
+  letter-spacing: -3px;
+
+  font-weight: 700;
+}
+
+
+/* Gradient on secondary title */
+
+.experience-header h2 span {
+  background:
+    linear-gradient(
+      90deg,
+      #65adff,
+      #8b7cff,
+      #55e6e6
+    );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+}
+
+
+.experience-intro {
+  max-width: 410px;
+
+  color:
+    rgba(255, 255, 255, 0.50);
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+
+/* ========================================
+   TIMELINE
+======================================== */
+
+.experience-timeline {
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+/* ========================================
+   EXPERIENCE ITEM
+======================================== */
+
+.experience-item {
+  display: grid;
+
+  grid-template-columns: 70px 1fr;
+
+  /* Remove the old 500px forced height */
+  min-height: auto;
+}
+
+
+/* ========================================
+   TIMELINE COLUMN
+======================================== */
+
+.timeline-column {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+
+/* ========================================
+   TIMELINE NUMBER
+======================================== */
+
+.timeline-number {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  border:
+    1px solid rgba(101, 173, 255, 0.35);
+
+  border-radius: 50%;
+
+  background: #080a12;
+
+  color: #65adff;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 0 25px rgba(85, 167, 255, 0.10);
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* Individual timeline colors */
+
+.experience-item:nth-child(1) .timeline-number {
+  color: #65adff;
+
+  border-color:
+    rgba(85, 167, 255, 0.40);
+}
+
+.experience-item:nth-child(2) .timeline-number {
+  color: #9b91ff;
+
+  border-color:
+    rgba(139, 124, 255, 0.40);
+}
+
+.experience-item:nth-child(3) .timeline-number {
+  color: #65dddd;
+
+  border-color:
+    rgba(85, 230, 230, 0.35);
+}
+
+
+/* ========================================
+   TIMELINE LINE
+======================================== */
+
+.timeline-line {
+  width: 1px;
+
+  flex: 1;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(85, 167, 255, 0.45),
+      rgba(139, 124, 255, 0.18),
+      rgba(255, 255, 255, 0.04)
+    );
+}
+
+
+.experience-item:last-child .timeline-line {
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(85, 230, 230, 0.35),
+      transparent
+    );
+}
+
+
+/* ========================================
+   EXPERIENCE CONTENT
+======================================== */
+
+.experience-content {
+  position: relative;
+
+  margin-bottom: 28px;
+
+  padding: 30px 34px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.035),
+      rgba(255, 255, 255, 0.012)
+    );
+
+  overflow: hidden;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+/* ========================================
+   COLORED GLOW IN CARDS
+======================================== */
+
+.experience-content::before {
+  content: "";
+
+  position: absolute;
+
+  width: 230px;
+  height: 230px;
+
+  right: -120px;
+  top: -120px;
+
+  border-radius: 50%;
+
+  filter: blur(50px);
+
+  opacity: 0.35;
+
+  pointer-events: none;
+
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
+}
+
+
+.experience-item:nth-child(1)
+.experience-content::before {
+  background:
+    rgba(85, 167, 255, 0.18);
+}
+
+
+.experience-item:nth-child(2)
+.experience-content::before {
+  background:
+    rgba(139, 124, 255, 0.18);
+}
+
+
+.experience-item:nth-child(3)
+.experience-content::before {
+  background:
+    rgba(85, 230, 230, 0.14);
+}
+
+
+/* ========================================
+   EXPERIENCE HOVER
+======================================== */
+
+.experience-content:hover {
+  transform: translateX(5px);
+
+  background:
+    rgba(255, 255, 255, 0.04);
+
+  box-shadow:
+    0 20px 55px rgba(0, 0, 0, 0.20);
+}
+
+
+.experience-item:nth-child(1)
+.experience-content:hover {
+  border-color:
+    rgba(85, 167, 255, 0.38);
+}
+
+
+.experience-item:nth-child(2)
+.experience-content:hover {
+  border-color:
+    rgba(139, 124, 255, 0.38);
+}
+
+
+.experience-item:nth-child(3)
+.experience-content:hover {
+  border-color:
+    rgba(85, 230, 230, 0.32);
+}
+
+
+.experience-content:hover::before {
+  opacity: 0.8;
+
+  transform: scale(1.3);
+}
+
+
+/* ========================================
+   TOP
+======================================== */
+
+.experience-top {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+
+.experience-period {
+  color: #65adff;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+/* Different colors */
+
+.experience-item:nth-child(2)
+.experience-period {
+  color: #9b91ff;
+}
+
+
+.experience-item:nth-child(3)
+.experience-period {
+  color: #65dddd;
+}
+
+
+/* ========================================
+   STATUS
+======================================== */
+
+.experience-status {
+  margin-left: 10px;
+
+  padding: 5px 8px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 100px;
+
+  background:
+    rgba(255, 255, 255, 0.02);
+
+  color:
+    rgba(255, 255, 255, 0.35);
+
+  font-size: 8px;
+
+  letter-spacing: 1px;
+}
+
+
+/* ========================================
+   ARROW
+======================================== */
+
+.experience-arrow {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.10);
+
+  border-radius: 50%;
+
+  color:
+    rgba(255, 255, 255, 0.48);
+
+  font-size: 13px;
+
+  transition:
+    transform 0.4s ease,
+    color 0.4s ease,
+    border-color 0.4s ease,
+    background 0.4s ease;
+}
+
+
+.experience-content:hover
+.experience-arrow {
+  transform: rotate(45deg);
+
+  color: white;
+
+  border-color:
+    rgba(101, 173, 255, 0.40);
+
+  background:
+    rgba(85, 167, 255, 0.07);
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.experience-content h3 {
+  position: relative;
+  z-index: 2;
+
+  margin: 32px 0 10px;
+
+  /* Before: up to 52px */
+  font-size:
+    clamp(28px, 3vw, 40px);
+
+  font-weight: 600;
+
+  line-height: 1.08;
+
+  letter-spacing: -1.5px;
+}
+
+
+/* ========================================
+   COMPANY
+======================================== */
+
+.experience-company {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-bottom: 22px;
+}
+
+
+.experience-company strong {
+  color:
+    rgba(255, 255, 255, 0.75);
+
+  font-size: 13px;
+}
+
+
+.experience-company span {
+  color:
+    rgba(255, 255, 255, 0.30);
+
+  font-size: 11px;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.experience-description {
+  position: relative;
+  z-index: 2;
+
+  max-width: 800px;
+
+  margin-bottom: 24px;
+
+  color:
+    rgba(255, 255, 255, 0.58);
+
+  /* Before: 16px */
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+
+/* ========================================
+   MISSIONS
+======================================== */
+
+.experience-missions {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  margin-bottom: 24px;
+}
+
+
+.mission {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+}
+
+
+.mission-dot {
+  flex-shrink: 0;
+
+  width: 5px;
+  height: 5px;
+
+  margin-top: 8px;
+
+  border-radius: 50%;
+
+  background: #65adff;
+
+  box-shadow:
+    0 0 10px rgba(85, 167, 255, 0.55);
+}
+
+
+/* Mission colors */
+
+.experience-item:nth-child(2)
+.mission-dot {
+  background: #9b91ff;
+
+  box-shadow:
+    0 0 10px rgba(139, 124, 255, 0.55);
+}
+
+
+.experience-item:nth-child(3)
+.mission-dot {
+  background: #65dddd;
+
+  box-shadow:
+    0 0 10px rgba(85, 230, 230, 0.45);
+}
+
+
+.mission p {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.42);
+
+  font-size: 12.5px;
+
+  line-height: 1.65;
+}
+
+
+/* ========================================
+   TECHNOLOGIES
+======================================== */
+
+.experience-technologies {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  padding-top: 20px;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.07);
+}
+
+
+.experience-technologies span {
+  padding: 7px 11px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 100px;
+
+  background:
+    rgba(255, 255, 255, 0.02);
+
+  color:
+    rgba(255, 255, 255, 0.55);
+
+  font-size: 9.5px;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.experience-technologies span:hover {
+  transform: translateY(-2px);
+
+  color: white;
+
+  border-color:
+    rgba(101, 173, 255, 0.40);
+
+  background:
+    rgba(85, 167, 255, 0.07);
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+  .experience {
+    padding: 95px 5%;
+  }
+
+  .experience-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 25px;
+
+    margin-bottom: 50px;
+  }
+
+  .experience-item {
+    grid-template-columns: 55px 1fr;
+  }
+
+  .experience-content {
+    padding: 27px;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+  .experience {
+    padding: 75px 5%;
+  }
+
+  .experience-header {
+    margin-bottom: 40px;
+  }
+
+  .experience-header h2 {
+    font-size: 42px;
+
+    letter-spacing: -2px;
+  }
+
+  .experience-intro {
+    font-size: 13px;
+  }
+
+  .experience-item {
+    grid-template-columns: 38px 1fr;
+  }
+
+  .timeline-number {
+    width: 30px;
+    height: 30px;
+
+    font-size: 8px;
+  }
+
+  .experience-content {
+    padding: 22px;
+
+    margin-bottom: 25px;
+
+    border-radius: 18px;
+  }
+
+  .experience-content h3 {
+    margin-top: 28px;
+
+    font-size: 28px;
+
+    letter-spacing: -1px;
+  }
+
+  .experience-period {
+    line-height: 1.5;
+  }
+
+  .experience-status {
+    display: none;
+  }
+
+  .experience-description {
+    font-size: 13px;
+  }
+
+  .mission p {
+    font-size: 12px;
+  }
+
+  .experience-arrow {
+    width: 34px;
+    height: 34px;
+  }
+
+}

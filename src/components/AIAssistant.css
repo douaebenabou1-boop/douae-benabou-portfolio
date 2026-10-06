@@ -1,0 +1,579 @@
+/* ========================================
+   FLOATING AI BUTTON
+======================================== */
+
+.ai-floating-button {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 9px 14px 9px 9px;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 100px;
+
+  background: rgba(12, 14, 24, 0.92);
+  backdrop-filter: blur(18px);
+
+  color: white;
+
+  font-family: inherit;
+  cursor: pointer;
+
+  box-shadow:
+    0 15px 50px rgba(0, 0, 0, 0.45),
+    0 0 30px rgba(116, 108, 255, 0.12);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.ai-floating-button:hover {
+  transform: translateY(-4px);
+  border-color: rgba(137, 148, 255, 0.55);
+}
+
+.ai-floating-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 39px;
+  height: 39px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #7b72ff,
+      #568fff,
+      #55d5ff
+    );
+
+  font-size: 18px;
+
+  box-shadow:
+    0 0 25px rgba(108, 110, 255, 0.35);
+}
+
+.ai-floating-text {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ai-online-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #3ee6a0;
+
+  box-shadow:
+    0 0 10px rgba(62, 230, 160, 0.8);
+}
+
+
+/* ========================================
+   CHAT WINDOW
+======================================== */
+
+.ai-assistant {
+  position: fixed;
+
+  right: 28px;
+  bottom: 28px;
+
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+
+  width: min(410px, calc(100vw - 40px));
+  height: min(650px, calc(100vh - 60px));
+
+  border:
+    1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      160deg,
+      rgba(15, 18, 31, 0.98),
+      rgba(6, 8, 15, 0.99)
+    );
+
+  color: white;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 35px 100px rgba(0, 0, 0, 0.6),
+    0 0 70px rgba(103, 96, 255, 0.09);
+
+  animation: assistantAppear 0.35s ease;
+}
+
+@keyframes assistantAppear {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.assistant-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  background:
+    rgba(255, 255, 255, 0.015);
+}
+
+.assistant-identity {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.assistant-logo {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #756cff,
+      #5c91ff,
+      #50d1ff
+    );
+
+  font-size: 18px;
+}
+
+.assistant-identity strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 13px;
+}
+
+.assistant-identity span {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 9px;
+}
+
+.assistant-identity i {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #3ee6a0;
+
+  box-shadow:
+    0 0 8px rgba(62, 230, 160, 0.7);
+}
+
+
+/* CLOSE */
+
+.assistant-close {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 35px;
+  height: 35px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.03);
+
+  color:
+    rgba(255, 255, 255, 0.55);
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.assistant-close:hover {
+  color: white;
+
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  transform: rotate(90deg);
+}
+
+
+/* ========================================
+   CHAT
+======================================== */
+
+.assistant-chat {
+  flex: 1;
+
+  padding: 22px 18px;
+
+  overflow-y: auto;
+}
+
+.assistant-message {
+  display: flex;
+
+  gap: 10px;
+
+  margin-bottom: 20px;
+}
+
+.assistant-message.user {
+  justify-content: flex-end;
+}
+
+.assistant-avatar {
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 9px;
+
+  background:
+    rgba(120, 112, 255, 0.12);
+
+  color: #999fff;
+
+  font-size: 12px;
+}
+
+.assistant-message-body {
+  max-width: 82%;
+
+  padding: 13px 14px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius:
+    4px 15px 15px 15px;
+
+  background:
+    rgba(255, 255, 255, 0.03);
+}
+
+.assistant-message.user .assistant-message-body {
+  border-radius:
+    15px 4px 15px 15px;
+
+  border-color:
+    rgba(125, 120, 255, 0.16);
+
+  background:
+    rgba(125, 120, 255, 0.09);
+}
+
+.assistant-message-body span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #8994ff;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.4px;
+}
+
+.assistant-message.user
+.assistant-message-body span {
+  text-align: right;
+
+  color:
+    rgba(255, 255, 255, 0.3);
+}
+
+.assistant-message-body p {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.67);
+
+  font-size: 12px;
+
+  line-height: 1.65;
+}
+
+
+/* ========================================
+   SUGGESTIONS
+======================================== */
+
+.assistant-suggestions {
+  padding: 0 18px 15px;
+}
+
+.suggestions-label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color:
+    rgba(255, 255, 255, 0.22);
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.assistant-suggestions > div {
+  display: flex;
+
+  gap: 6px;
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+}
+
+.assistant-suggestions > div::-webkit-scrollbar {
+  display: none;
+}
+
+.assistant-suggestions button {
+  flex-shrink: 0;
+
+  padding: 8px 11px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 100px;
+
+  background:
+    rgba(255, 255, 255, 0.025);
+
+  color:
+    rgba(255, 255, 255, 0.45);
+
+  font-family: inherit;
+
+  font-size: 9px;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.assistant-suggestions button:hover {
+  color: white;
+
+  border-color:
+    rgba(137, 148, 255, 0.4);
+
+  background:
+    rgba(137, 148, 255, 0.08);
+}
+
+
+/* ========================================
+   INPUT
+======================================== */
+
+.assistant-input {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin: 0 18px 14px;
+
+  padding: 7px 7px 7px 13px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 14px;
+
+  background:
+    rgba(255, 255, 255, 0.035);
+
+  transition:
+    border-color 0.3s ease;
+}
+
+.assistant-input:focus-within {
+  border-color:
+    rgba(137, 148, 255, 0.5);
+}
+
+.assistant-input > span {
+  color: #8994ff;
+
+  font-size: 12px;
+}
+
+.assistant-input input {
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 9px 0;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 11px;
+}
+
+.assistant-input input::placeholder {
+  color:
+    rgba(255, 255, 255, 0.23);
+}
+
+.assistant-input button {
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: white;
+
+  color: #070910;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.assistant-input button:hover {
+  transform: translateY(-2px);
+
+  background: #dfe1ff;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.assistant-footer {
+  padding: 11px;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.06);
+
+  color:
+    rgba(255, 255, 255, 0.17);
+
+  font-size: 7px;
+
+  text-align: center;
+
+  letter-spacing: 1.4px;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+  .ai-floating-button {
+    right: 18px;
+    bottom: 18px;
+  }
+
+  .ai-assistant {
+    right: 12px;
+    bottom: 12px;
+
+    width: calc(100vw - 24px);
+
+    height: min(
+      650px,
+      calc(100vh - 24px)
+    );
+
+    border-radius: 20px;
+  }
+
+}
