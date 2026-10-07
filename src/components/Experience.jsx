@@ -5,7 +5,7 @@ function Experience() {
   const experiences = [
     {
       number: "01",
-      period: "JULY 2026 — PRESENT",
+      period: "JULY 2026 — august 2026 ",
       company: "Banque Populaire",
       location: "Rabat, Morocco",
       role: "Data Scientist",
